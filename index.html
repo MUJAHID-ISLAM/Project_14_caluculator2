@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        body{
+            background-color: rgb(189, 189, 189);
+            font-family: sans-serif;
+            
+
+        }
+        #calculator{
+            width: 370px;
+            margin: 0 auto;
+            background-color: rgb(41, 39, 39);
+            margin-top: 20PX;
+        }
+        input{
+            width: 100px;
+            height: 60px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(17, 17, 17);
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        #result{
+            width: 340px;
+            border-radius: 20px;
+            padding-left: 5px;
+        }
+        #result2{
+            width: 60%;
+            background-color: #000;
+        }
+        
+    </style>
+</head>
+<body>
+   
+
+        <div id="calculator">
+            <form> 
+            <input type="text" id="result" name="result" readonly><br><br>
+            <input type="button" value=" 1 " onclick="form.result.value += '1'">
+            <input type="button" value=" 2 " onclick="form.result.value += '2'">
+            <input type="button" value=" 3 " onclick="form.result.value += '3'"><br>
+            <input type="button" value=" 4 " onclick="form.result.value += '4'">
+            <input type="button" value=" 5 " onclick="form.result.value += '5'">
+            <input type="button" value=" 6 " onclick="form.result.value += '6'"><br>
+            <input type="button" value=" 7 " onclick="form.result.value += '7'">
+            <input type="button" value=" 8 " onclick="form.result.value += '8'">
+            <input type="button" value=" 9 " onclick="form.result.value += '9'"><br>
+            <input type="button" value=" 0 " onclick="form.result.value += '0'">
+            <input type="button" value=" + " onclick="form.result.value += ' + '">
+            <input type="button" value=" * " onclick="form.result.value += ' * '"><br>
+            <input type="button" value=" - " onclick="form.result.value += ' - '">
+            <input type="button"  value=" / " onclick="form.result.value += ' / '">
+            <input type="button" value=" C " onclick="form.result.value = ' '">
+            <input type="button" id="backspace"  value =" &#8592; " onclick="back()">
+            <input type="button" id="result2" value=" = " onclick="form.result.value = eval(form.result.value )">
+        
+        </form>
+    </div>
+    <script>
+        function back() {
+    var el = document.getElementById("result").value;
+        el = el.substr(0, el.length -1);
+        document.getElementById("result").value = el;
+}
+    </script>
+</body>
+</html>
